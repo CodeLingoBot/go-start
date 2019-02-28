@@ -46,7 +46,7 @@ func LastPanicOnError(args ...interface{}) {
 	}
 }
 
-// Returns the first error in args
+// First returns the first error in args
 func First(args ...interface{}) error {
 	for _, arg := range args {
 		if arg != nil {

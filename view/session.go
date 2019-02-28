@@ -70,7 +70,7 @@ func (self *Session) DeleteID() {
 	self.Tracker.DeleteID(self.Ctx)
 }
 
-// SessionData returns all session data in out.
+// Data returns all session data in out.
 func (self *Session) Data(out interface{}) (ok bool, err error) {
 	if self.DataStore == nil {
 		return false, errs.Format("Can't get session data without gostart/views.Config.SessionDataStore")
@@ -78,7 +78,7 @@ func (self *Session) Data(out interface{}) (ok bool, err error) {
 	return self.DataStore.Get(self.Ctx, out)
 }
 
-// SetSessionData sets all session data.
+// SetData sets all session data.
 func (self *Session) SetData(data interface{}) (err error) {
 	if self.DataStore == nil {
 		return errs.Format("Can't set session data without gostart/views.Config.SessionDataStore")
@@ -86,7 +86,7 @@ func (self *Session) SetData(data interface{}) (err error) {
 	return self.DataStore.Set(self.Ctx, data)
 }
 
-// DeleteSessionData deletes all session data.
+// DeleteData deletes all session data.
 func (self *Session) DeleteData() (err error) {
 	if self.DataStore == nil {
 		return errs.Format("Can't delete session data without gostart/views.Config.SessionDataStore")

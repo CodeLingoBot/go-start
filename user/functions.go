@@ -42,7 +42,7 @@ func FromDocument(document interface{}) (user *User) {
 	panic(errs.Format("user.From(): invalid document type %T", document))
 }
 
-// Will use user.User.Username for search
+// EnsureExists Will use user.User.Username for search
 // Sets the username also as first name
 func EnsureExists(username, email, password string, admin bool, resultRef interface{}) (exists bool, err error) {
 	exists, err = Config.Collection.Filter("Username", username).TryOneDocument(resultRef)

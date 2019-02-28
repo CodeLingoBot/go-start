@@ -2,7 +2,7 @@ package model
 
 import "github.com/ungerik/go-start/reflection"
 
-// ConvertIterator returns an Iterator that calls conversionFunc
+// ConversionIterator returns an Iterator that calls conversionFunc
 // for every from.Next() result and returns the result
 // of conversionFunc at every Next().
 func ConversionIterator(from Iterator, fromResultPtr interface{}, conversionFunc func(interface{}) interface{}) Iterator {

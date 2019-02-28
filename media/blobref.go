@@ -41,7 +41,7 @@ func (self *BlobRef) TryGet() (*Blob, bool, error) {
 	return blob, err == nil, err
 }
 
-// SetBlob sets the ID of blob, or an empty reference if blob is nil.
+// Set sets the ID of blob, or an empty reference if blob is nil.
 func (self *BlobRef) Set(blob *Blob) {
 	if blob != nil {
 		self.SetString(blob.ID.String())

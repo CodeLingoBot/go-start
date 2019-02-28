@@ -188,7 +188,7 @@ func H5(content ...interface{}) View {
 	return &ShortTag{Tag: "h5", Content: WrapContents(content...)}
 }
 
-// H creates <h6>content</h6>
+// H6 creates <h6>content</h6>
 func H6(content ...interface{}) View {
 	return &ShortTag{Tag: "h6", Content: WrapContents(content...)}
 }

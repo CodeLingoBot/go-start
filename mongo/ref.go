@@ -43,12 +43,12 @@ func (self *Ref) DocumentLabel() (string, error) {
 	return self.Collection().DocumentLabel(self.ID)
 }
 
-// Returns nil and no error if the reference is empty
+// Get returns nil and no error if the reference is empty
 func (self *Ref) Get(resultRef interface{}) error {
 	return self.Collection().DocumentWithID(self.ID, resultRef)
 }
 
-// Returns an error if the reference is empty
+// TryGet returns an error if the reference is empty
 func (self *Ref) TryGet(resultRef interface{}) (found bool, err error) {
 	return self.Collection().TryDocumentWithID(self.ID, resultRef)
 }

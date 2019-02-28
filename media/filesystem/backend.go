@@ -19,13 +19,13 @@ func (backend *Backend) FileWriter(filename, contentType string) (writer io.Writ
 	return writer, filename, err
 }
 
-// Returns ErrNotFound if no file with id is found.
+// FileReader returns ErrNotFound if no file with id is found.
 func (backend *Backend) FileReader(id string) (reader io.ReadCloser, filename, contentType string, err error) {
 	reader, err = os.OpenFile(path.Join(backend.BaseDir, filename), os.O_RDONLY, 0660)
 	return reader, id, mime.TypeByExtension(id), err
 }
 
-// Returns ErrNotFound if no file with id is found.
+// DeleteFile returns ErrNotFound if no file with id is found.
 func (backend *Backend) DeleteFile(id string) error {
 	return os.Remove(path.Join(backend.BaseDir, id))
 }
@@ -61,7 +61,7 @@ func (backend *Backend) RemoveAllBlobRefs(blobID string) (count int, err error) 
 	panic("not implemented")
 }
 
-// Returns ErrNotFound if no image with id is found.
+// LoadImage returns ErrNotFound if no image with id is found.
 func (backend *Backend) LoadImage(id string) (*media.Image, error) {
 	panic("not implemented")
 }

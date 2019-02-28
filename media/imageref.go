@@ -44,7 +44,7 @@ func (self *ImageRef) TryGet() (*Image, bool, error) {
 	return image, err == nil, err
 }
 
-// SetImage sets the ID of image, or an empty reference if image is nil.
+// Set sets the ID of image, or an empty reference if image is nil.
 func (self *ImageRef) Set(image *Image) {
 	if image != nil {
 		self.SetString(image.ID.String())

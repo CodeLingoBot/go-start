@@ -35,7 +35,7 @@ func (self *Request) AddProtocolAndHostToURL(url string) string {
 	return url
 }
 
-// URL returns the complete URL of the request including protocol and host.
+// URLString returns the complete URL of the request including protocol and host.
 func (self *Request) URLString() string {
 	return self.AddProtocolAndHostToURL(self.RequestURI)
 }

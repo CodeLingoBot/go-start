@@ -20,7 +20,7 @@ func (self Views) ID() string {
 	return ""
 }
 
-// Does not iterate nil children
+// IterateChildren Does not iterate nil children
 func (self Views) IterateChildren(callback IterateChildrenCallback) {
 	for _, view := range self {
 		if view != nil && !callback(self, view) {

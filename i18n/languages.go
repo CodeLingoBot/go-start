@@ -12,7 +12,7 @@ func EnglishLanguageName(code string) string {
 	return name
 }
 
-// ISO 639-1
+// Languages ISO 639-1
 func Languages() map[string]string {
 	if iso639_1 == nil {
 	}

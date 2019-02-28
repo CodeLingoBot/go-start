@@ -66,7 +66,7 @@ func ProductionServerRenderer(renderer Renderer) Renderer {
 	return renderer
 }
 
-// NotProductionServerRenderer returns renderer if view.Config.IsProductionServer
+// NonProductionServerRenderer returns renderer if view.Config.IsProductionServer
 // is false, else nil which is a valid value for a Renderer.
 func NonProductionServerRenderer(renderer Renderer) Renderer {
 	if Config.IsProductionServer {

@@ -20,7 +20,7 @@ type EmailIdentity struct {
 	ConfirmationCode model.String
 }
 
-// EmailIdentity has to be saved after a successful call because the confirmation code could have changed
+// SendConfirmationEmail has to be saved after a successful call because the confirmation code could have changed
 // confirmationPage needs to be a page with one URL parameter
 func (self *EmailIdentity) SendConfirmationEmail(ctx *view.Context, confirmationURL view.URL) <-chan error {
 	errChan := make(chan error, 1)

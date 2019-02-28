@@ -431,7 +431,7 @@ func (self *Form) GetFieldControllers() FormFieldControllers {
 	return self.FieldControllers
 }
 
-// AddCustomMongoRefController adds a FormFieldController that creates a
+// AddMongoRefController adds a FormFieldController that creates a
 // drop-down lists or auto-completion fields for mongo.Ref fields in
 // the form model. refSelector selects for which mongo.Ref fields this
 // FormFieldController should be used.
@@ -501,7 +501,7 @@ func (self *Form) GetRequiredMarker() View {
 	return self.RequiredMarker
 }
 
-// Returns self.SubmitButtonText if not empty,
+// GetSubmitButtonText returns self.SubmitButtonText if not empty,
 // else Config.Form.DefaultSubmitButtonText
 func (self *Form) GetSubmitButtonText() string {
 	if self.SubmitButtonText == "" {

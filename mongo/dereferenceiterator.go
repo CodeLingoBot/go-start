@@ -1,6 +1,6 @@
 package mongo
 
-// Returns an iterator of dereferenced refs, or an error iterator if there was an error
+// NewDereferenceIterator returns an iterator of dereferenced refs, or an error iterator if there was an error
 func NewDereferenceIterator(refs ...Ref) *DereferenceIterator {
 	return &DereferenceIterator{Refs: refs}
 }
